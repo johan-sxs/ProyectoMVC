@@ -11,7 +11,9 @@ namespace Peli.Core
        public List<Pelicula> Peliculas {get;set;}
        public Productora()
        {
-           Peliculas = new List<Peliula>();
+           Peliculas = new List<Pelicula>();
        }
+        public void AgregarPelicula(Pelicula pelicula)
+            => Peliculas.Add(pelicula);
         }
  }

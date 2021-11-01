@@ -8,11 +8,13 @@ namespace Peli.Core
 
     public int Id {get; set;}
     public string Nombre {get; set;}
+    public List<Pelicula> Peliculas {get;set;}
 
-    public Genero (int id, )
-    {
-      
-    }
-
-    }
+       public Genero()
+       {
+           Peliculas = new List<Pelicula>();
+       }
+        public void AgregarPelicula(Pelicula pelicula)
+            => Peliculas.Add(pelicula);
+        }
 }
