@@ -8,8 +8,29 @@ namespace Peli.Core
         static int idProductora = 1;
         static int idGenero = 1;
 
-          static readonly List<Categoria> categorias = new List<Categoria>();
-        public static IEnumerable<Categoria> Categorias
-            => categorias;
+          static readonly List<Productora> productorass = new List<Productora>();
+          
+            public static Productora GetProductora(int id)
+            => productoras.Find(p => p.Id == id);
+        public static void AgregarCategoria(Productora productora)
+        {
+            productora.Id = idProductora++;
+            productoras.Add(productora);
+        }
+        public static Productora GetProductora(int id)
+            => productoras.Find(p => p.Id == id);
+        public static void AgregarCategoria(Productora productora)
+        {
+            productora.Id = idProductora++;
+            productoras.Add(productora);
+        }
+        public static Productora GetProductora(int id)
+            => productoras.Find(p => p.Id == id);
+        public static void AgregarCategoria(Productora productora)
+        {
+            productora.Id = idProductora++;
+            productoras.Add(productora);
+        }
+
     }
 }

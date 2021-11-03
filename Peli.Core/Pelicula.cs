@@ -10,15 +10,7 @@ namespace Peli.Core
         public short Duracion {get; set;}
         public DateTime FechaEstreno {get; set;}
         public string Descripcion {get; set;}
+        public Genero genero;
 
-   public pelicula(string titulo,short duracion,DateTime fechaEstreno, string descripcion)
-{
-
-   Titulo=titulo;
-   Duracion = duracion;
-   FechaEstreno = DateTime;
-   Descripcion = descripcion
-
-}
     }
 }
