@@ -1,0 +1,19 @@
+@model Peli.Core.Genero
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<head>
+    <title>Peliculas - Genero</title>
+</head>
+<body>
+    <form asp-action="FormAlta" method="post">
+        <div asp-validation-summary="All"></div>
+        <div>
+            <label asp-for="Nombre">GENEROS:</label>
+            <input asp-for="Nombre" />
+        </div>
+        <button type="submit">Alta Genero</button>
+    </form>
+</body>
+</html>

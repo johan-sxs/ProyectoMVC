@@ -1,8 +1,14 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = null;
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Peliculas</title>
+</head>
+<body>
+   
+    <a asp-controller="Genero" asp-action="Index">Ver Generos</a><br />
+    <a asp-controller="Genero"asp-action="FormAlta">Alta Genero</a>
+</body>
+</html>
