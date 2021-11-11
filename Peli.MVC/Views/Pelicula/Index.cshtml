@@ -1,0 +1,27 @@
+@model  IEnumerable<Peli.Core.Pelicula>
+@{
+    Layout = null;
+}
+<html>
+    <head>
+        <title>Pelicula - Peliculas</title>
+    </head>
+    <body>
+<h1>Peliculas</h1>
+<table>
+    <thead>
+    <td>Titulo</td>
+    </thead>
+    <tbody>
+    @foreach (Peli.Core.Pelicula pelicula in Model)
+    {
+        <tr>
+        <td>
+        <a asp-controller="Pelicula" asp-action="Detalle" asp-route-id="@pelicula.Id">@pelicula.Titulo</a> 
+        </td>
+        </tr>
+    }
+    </tbody>
+</table>
+    </body>
+</html>

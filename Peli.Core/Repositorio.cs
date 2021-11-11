@@ -29,6 +29,7 @@ namespace Peli.Core
         }
 
         static readonly List<Pelicula> peliculas = new List<Pelicula>();
+        public static IEnumerable<Pelicula> Peliculas => peliculas;
 
         public static Pelicula GetPelicula(int id)
             => peliculas.Find(p => p.Id == id);
