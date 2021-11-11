@@ -1,4 +1,4 @@
-@model Peli.Core.Genero
+@model  IEnumerable<Peli.Core.Genero>
 @{
     Layout = null;
 }
@@ -12,6 +12,16 @@
     <thead>
     <td>Nombre</td>
     </thead>
+    <tbody>
+    @foreach (Peli.Core.Genero genero in Model)
+    {
+        <tr>
+        <td>
+        <a asp-controller="Genero" asp-action="Detalle" asp-route-id="@genero.Id">genero.Nombre</a> 
+        </td>
+        </tr>
+    }
+    </tbody>
 </table>
     </body>
 </html>

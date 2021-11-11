@@ -10,8 +10,6 @@ namespace Peli.Core
         static int idGenero = 1;
         static int idPelicula = 1;
 
-        public static string Generos { get; set; }
-
         static readonly List<Productora> productoras = new List<Productora>();
         public static Productora GetProductora(int id)
         => productoras.Find(p => p.Id == id);
@@ -21,6 +19,7 @@ namespace Peli.Core
             productoras.Add(productora);
         }
         static readonly List<Genero> generos = new List<Genero>();
+        public static IEnumerable<Genero> Generos => generos;
         public static Genero GetGenero(int id)
             => generos.Find(g => g.Id == id);
         public static void AgregarGenero(Genero genero)
