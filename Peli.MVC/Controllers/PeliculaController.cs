@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Peli.Core;
+using Peli.MVC.ViewModels;
 
 namespace Peli.Controllers
 {
@@ -22,7 +23,14 @@ namespace Peli.Controllers
         }
         [HttpGet]
 
-        public IActionResult FormAlta() => View();
+        public IActionResult FormAlta(int? idGenero)
+         {
+            var vmPelicula= new VMPelicula(Repositorio.Generos)
+            {
+               IdGeneroSeleccionado = idGenero
+            };
+            return View(vmPelicula);
+        }
 
         [HttpPost]
 
