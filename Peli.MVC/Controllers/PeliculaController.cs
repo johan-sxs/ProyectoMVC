@@ -37,7 +37,7 @@ namespace Peli.Controllers
         public IActionResult FormAlta(Pelicula pelicula)
         {
             Repositorio.AgregarPelicula(pelicula);
-            return View("index", Repositorio.Peliculas);
+            return View("Index", Repositorio.Peliculas);
         }
     }
 }
