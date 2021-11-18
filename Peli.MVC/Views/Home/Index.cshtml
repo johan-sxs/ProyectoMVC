@@ -4,16 +4,41 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+div.a {
+  text-align: center;
+}
+</style>
     <title>Peliculas</title>
 </head>
 <body>
+<div class="a">
+  <h2>Elige Donde Entrar</h2>
+  </div>
+
+<table>
+ <tr>
+    <th>GENERO</th>
+    <th>PELICULA</th>
+  </tr>
+<tr>
+    <td><a asp-controller="Genero" asp-action="Index">Ver Generos</a></td>
+     <td><a asp-controller="Pelicula" asp-action="Index">Ver Peliculas</a></td>
    
-    <a asp-controller="Genero" asp-action="Index">Ver Generos</a><br />
-    <a asp-controller="Genero"asp-action="FormAlta">Alta Genero</a>
- <br/>
-  <br/>
-    <a asp-controller="Pelicula" asp-action="Index">Ver Peliculas</a><br />
-    <a asp-controller="Pelicula"asp-action="FormAlta">Alta Pelicula</a>
+ </tr>
+    <tr>
+  <td> <a asp-controller="Genero"asp-action="FormAlta">Alta Genero</a></td>
+    <td><a asp-controller="Pelicula"asp-action="FormAlta">Alta Pelicula</a></td>
+    </tr>
+    </table>
 
 </body>
 </html>

@@ -4,24 +4,61 @@
 }
 <html>
     <head>
-        <title>Pelicula - Peliculas</title>
+        <style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: black;
+  color: white;
+}
+div.a {
+  text-align: center;
+}
+</style>
+        <title> Peliculas</title>
+        </div>
     </head>
     <body>
-<h1>Peliculas</h1>
-<table>
+        <div class="a">
+<h1>PELICULAS</h1>
+</div>
+<table id = "customers">
     <thead>
-    <td>Titulo</td>
+        <tr>
+    <th>Titulo</th>
+    <th>Duracion</th>
+    <th>FechaEstreno</th>
+    <th>Descripcion</th>
+    <th>Genero</th>
+    </tr>
     </thead>
     <tbody>
     @foreach (Peli.Core.Pelicula pelicula in Model)
     {
         <tr>
-        <td>
-        <a asp-controller="Pelicula" asp-action="Detalle" asp-route-id="@pelicula.Id">@pelicula.Titulo</a> 
-        </td>
+        
+        <td><a asp-controller="Pelicula" asp-action="" asp-route-id="@pelicula.Id">@pelicula.Titulo</a> </td>
+        <td><a asp-controller="Pelicula" asp-action="" asp-route-id="@pelicula.Id">@pelicula.Duracion</a> </td>
+        <td><a asp-controller="Pelicula" asp-action="" asp-route-id="@pelicula.Id">@pelicula.FechaEstreno</a> </td>
+        <td><a asp-controller="Pelicula" asp-action="" asp-route-id="@pelicula.Id">@pelicula.Descripcion</a> </td>
+        <td><a asp-controller="Pelicula" asp-action="" asp-route-id="@pelicula.Id">@pelicula.genero</a> </td>
         </tr>
     }
     </tbody>
 </table>
     </body>
 </html>
+
+

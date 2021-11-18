@@ -4,13 +4,35 @@
 }
 <html>
     <head>
+        <style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 10%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: black;
+  color: white;
+}
+</style>
         <title>Pelicula - Genero</title>
     </head>
     <body>
 <h1>Generos</h1>
-<table>
+<table id="customers">
     <thead>
-    <td>Nombre</td>
+        <tr>
+    <th>Nombre</th>
+    </tr>
     </thead>
     <tbody>
     @foreach (Peli.Core.Genero genero in Model)
