@@ -6,19 +6,10 @@
 <!DOCTYPE html>
 <html >
 <head>
-<title> Pelicula - Detalle @Model.Nombre</title>
+<title>  Detalle @Model.Nombre</title>
 </head>
 <body>
-   
 <tbody>
-    @foreach (Peli.Core.Pelicula pelicula in Model.Peliculas)
-    {
-        <tr>
-            <td>
-                <a asp-controller = "Pelicula" asp-action ="Detalle" asp-route-id = "@pelicula.Id">@pelicula.Titulo</a>
-            </td>
-        </tr>
-    }
 </tbody>
 </body>
 </html>

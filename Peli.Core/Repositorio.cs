@@ -28,16 +28,23 @@ namespace Peli.Core
             generos.Add(genero);
         }
 
-        static readonly List<Pelicula> peliculas = new List<Pelicula>();
-        public static IEnumerable<Pelicula> Peliculas => peliculas;
-
-        public static Pelicula GetPelicula(int id)
-            => peliculas.Find(p => p.Id == id);
         public static void AgregarPelicula(Pelicula pelicula)
         {
             pelicula.Id = idPelicula++;
-            peliculas.Add(pelicula);
+      
         }
-
+        public static IEnumerable<Pelicula> Peliculas 
+        => generos.SelectMany(c => c.Peliculas);
+        public static IEnumerable<Pelicula> PeliculasDe(int idGenero)
+        {
+            var genero = GetGenero(idGenero);
+            if (genero is null)
+            {
+                return null;
+            }
+            return genero.Peliculas;
+        }
+public static Pelicula GetPelicula(int id)
+            => Peliculas.First(p => p.Id == id);
     }
 }
