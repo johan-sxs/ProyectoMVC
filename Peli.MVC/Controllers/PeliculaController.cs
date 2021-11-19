@@ -34,17 +34,10 @@ namespace Peli.Controllers
 
         [HttpPost]
 
-        public IActionResult FormAlta(VMPelicula vMPelicula)
+        public IActionResult FormAlta(Pelicula pelicula)
         {
-            if (Validar(vMPelicula))
-            {
-             var genero = Repositorio.GetGenero(vMPelicula.IdGeneroSeleccionado.Value);
-             genero.AgregarPelicula(vMPelicula.Pelicula);
-                Repositorio.AgregarPelicula(vMPelicula.Pelicula);
-            }
-            return View("Index", Repositorio.Peliculas);
-        }
-        private bool Validar(VMPelicula vMPelicula)
-            => (vMPelicula.IdGeneroSeleccionado.HasValue) ;
+             Repositorio.AgregarPelicula(pelicula);
+            return View("index", Repositorio.Peliculas);
     }
+}
 }

@@ -1,5 +1,4 @@
-@model Peli.MVC.ViewModels.VMPelicula;
-@using IEnumerable<Pelicula>
+@model IEnumerable<Peli.Core.Pelicula>
 @{
   Layout = null;
 }
@@ -46,19 +45,17 @@
         <th>Duracion</th>
         <th>FechaEstreno</th>
         <th>Descripcion</th>
-        <th>Genero</th>
       </tr>
     </thead>
     <tbody>
-      @foreach (Peli.Core.Pelicula pelicula in Model.peliculas)
+      @foreach (Peli.Core.Pelicula pelicula in Model)
       {
         <tr>
 
-          <td><a asp-controller="Pelicula" asp-action="" asp-route-id="@pelicula.Id">@pelicula.Titulo</a> </td>
-          <td><a asp-controller="Pelicula" asp-action="" asp-route-id="@pelicula.Id">@pelicula.Duracion</a> </td>
-          <td><a asp-controller="Pelicula" asp-action="" asp-route-id="@pelicula.Id">@pelicula.FechaEstreno</a> </td>
-          <td><a asp-controller="Pelicula" asp-action="" asp-route-id="@pelicula.Id">@pelicula.Descripcion</a>
-          <td><a asp-controller="Pelicula" asp-action="" asp-route-id="@pelicula.Id">@pelicula.genero.Nombre</a></td>
+          <td><a asp-controller="Pelicula" asp-action="Detalle" asp-route-id="@pelicula.Id">@pelicula.Titulo</a> </td>
+          <td><a asp-controller="Pelicula" asp-action="Detalle" asp-route-id="@pelicula.Id">@pelicula.Duracion</a> </td>
+          <td><a asp-controller="Pelicula" asp-action="Detalle" asp-route-id="@pelicula.Id">@pelicula.FechaEstreno</a> </td>
+          <td><a asp-controller="Pelicula" asp-action="Detalle" asp-route-id="@pelicula.Id">@pelicula.Descripcion</a>
           </td>
         </tr>
       }

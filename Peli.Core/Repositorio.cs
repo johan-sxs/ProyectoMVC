@@ -11,9 +11,11 @@ namespace Peli.Core
         static int idPelicula = 1;
 
         static readonly List<Productora> productoras = new List<Productora>();
+         public static IEnumerable<Productora> Productoras => productoras;
+
         public static Productora GetProductora(int id)
         => productoras.Find(p => p.Id == id);
-        public static void AgregarCategoria(Productora productora)
+        public static void AgregarProductora(Productora productora)
         {
             productora.Id = idProductora++;
             productoras.Add(productora);
@@ -28,23 +30,15 @@ namespace Peli.Core
             generos.Add(genero);
         }
 
+        static readonly List<Pelicula> peliculas = new List<Pelicula>();
+        public static IEnumerable<Pelicula> Peliculas => peliculas;
+        public static Pelicula GetPelicula(int id)
+            => peliculas.Find(p => p.Id == id);
         public static void AgregarPelicula(Pelicula pelicula)
         {
             pelicula.Id = idPelicula++;
-      
+            peliculas.Add(pelicula);
         }
-        public static IEnumerable<Pelicula> Peliculas 
-        => generos.SelectMany(c => c.Peliculas);
-        public static IEnumerable<Pelicula> PeliculasDe(int idGenero)
-        {
-            var genero = GetGenero(idGenero);
-            if (genero is null)
-            {
-                return null;
-            }
-            return genero.Peliculas;
-        }
-public static Pelicula GetPelicula(int id)
-            => Peliculas.First(p => p.Id == id);
+
     }
 }
