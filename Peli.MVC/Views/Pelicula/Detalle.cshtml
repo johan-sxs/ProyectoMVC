@@ -1,0 +1,30 @@
+@model Peli.Core.Pelicula
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Detalle - Pelicula</title>
+</head>
+<body>
+    <h1>Detalle</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Duracion</th>
+                <th>FechaEstreno</th>
+                <th>Genero</th>
+            </tr>
+        </thead>
+        <tbody>
+         <td>@Model.Duracion</td> 
+         <td>@Model.FechaEstreno</td>
+         <td>@Model.genero.Nombre</td>
+        </tbody>
+    </table>
+    <button>
+<a asp-controller="" asp-action="Index">Inicio</a>
+</button>
+</body>
+</html>

@@ -36,8 +36,8 @@ namespace Peli.Controllers
 
         public IActionResult FormAlta(VMPelicula vMPelicula)
         {
-             var persona = Repositorio.GetGenero(vMPelicula.IdGeneroSeleccionado.Value);
-             vMPelicula.Pelicula.Genero = genero;
+             var genero = Repositorio.GetGenero(vMPelicula.IdGeneroSeleccionado.Value);
+             vMPelicula.Pelicula.genero = genero;
              Repositorio.AgregarPelicula(vMPelicula.Pelicula);
              return View("Index",Repositorio.Peliculas);
     }
