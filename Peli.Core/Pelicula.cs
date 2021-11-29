@@ -10,7 +10,6 @@ namespace Peli.Core
         public short Duracion {get; set;}
         public DateTime FechaEstreno {get; set;}
         public string Descripcion {get; set;}
-        public List<Genero> generos { get; set; }
-       public Pelicula() => generos= new List<Genero>();
+        public Genero genero {get;set;}
     }
 }

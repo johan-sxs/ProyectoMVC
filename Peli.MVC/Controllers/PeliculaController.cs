@@ -34,10 +34,12 @@ namespace Peli.Controllers
 
         [HttpPost]
 
-        public IActionResult FormAlta(Pelicula pelicula)
+        public IActionResult FormAlta(VMPelicula vMPelicula)
         {
-             Repositorio.AgregarPelicula(pelicula);
-            return View("index", Repositorio.Peliculas);
+             var persona = Repositorio.GetGenero(vMPelicula.IdGeneroSeleccionado.Value);
+             vMPelicula.Pelicula.Genero = genero;
+             Repositorio.AgregarPelicula(vMPelicula.Pelicula);
+             return View("Index",Repositorio.Peliculas);
     }
 }
 }
