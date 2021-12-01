@@ -1,0 +1,19 @@
+@model Peli.Core.Productora
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<head>
+    <title>Pelicula - Productora</title>
+</head>
+<body>
+    <form asp-action="FormAlta" method="post">
+        <div asp-validation-summary="All"></div>
+        <div>
+            <label asp-for="Nombre">Productora</label>
+            <input asp-for="Nombre" />
+        </div>
+        <button type="submit">Alta Productora</button>
+    </form>
+</body>
+</html>
