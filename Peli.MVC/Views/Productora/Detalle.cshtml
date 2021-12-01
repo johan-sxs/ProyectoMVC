@@ -1,0 +1,26 @@
+@model Peli.Core.Productora
+@{
+    Layout =null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Detalle - Pelicula</title>
+</head>
+<body>
+    <h1>Detalle</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Peliculas</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Peli.Core.Pelicula pelicula in Model.Peliculas)
+            {
+            <a asp-controller="Pelicula" asp-action="Detalle" asp-route-id="@pelicula.Id">@pelicula.Titulo</a>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
