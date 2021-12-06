@@ -1,19 +1,21 @@
 @model IEnumerable<Peli.Core.Productora>
 @{
-    Layout = null;
+  Layout = "_Layout2";
 }
 
 <html>
+
 <head>
-    <title>Productora</title>
+  <title>Productora</title>
 </head>
+
 <body>
-    <h1>PRODUCTORA</h1>
+  <h1 class="c">PRODUCTORA</h1>
   </div>
-  <table>
+  <table class="table is-bordered">
     <thead>
       <tr>
-        <th>Nombre</th>
+        <th class="g3">Nombre</th>
       </tr>
     </thead>
     <tbody>
@@ -21,14 +23,16 @@
       {
         <tr>
 
-          <td><a asp-controller="Productora" asp-action="Detalle" asp-route-id="@productora.Id">@productora.Nombre</a> </td>
+          <td class="g2"><a asp-controller="Productora" asp-action="Detalle"
+            asp-route-id="@productora.Id">@productora.Nombre</a> </td>
         </tr>
       }
     </tbody>
   </table>
   <br>
   <button>
-<a asp-controller="" asp-action="Index">Inicio</a>
-</button>
+    <a asp-controller="" asp-action="Index">Inicio</a>
+  </button>
 </body>
+
 </html>

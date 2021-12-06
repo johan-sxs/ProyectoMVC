@@ -1,15 +1,17 @@
 @model Peli.Core.Genero
 @{
-    Layout =null;
+    Layout = null;
 }
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Detalle - Genero</title>
 </head>
+
 <body>
     <h1>Detalle</h1>
-    <h3 > Nombre: @Model.Nombre </h3>
+    <h3> Nombre: @Model.Nombre </h3>
     <table>
         <thead>
             <tr>
@@ -19,15 +21,16 @@
         <tbody>
             @foreach (Peli.Core.Pelicula pelicula in Model.Peliculas)
             {
-            <tr>
-                <td>@pelicula.Titulo</td>
-            </tr>
+                <tr>
+                    <td>@pelicula.Titulo</td>
+                </tr>
             }
         </tbody>
     </table>
-    <a  asp-controller="Pelicula" asp-action="Index"> Agregar Peliculas </a> <br />
+    <a asp-controller="Pelicula" asp-action="Index"> Agregar Peliculas </a> <br />
     <button>
-<a asp-action="Index"> inicio </a>
-</button>
+        <a asp-action="Index"> inicio </a>
+    </button>
 </body>
+
 </html>

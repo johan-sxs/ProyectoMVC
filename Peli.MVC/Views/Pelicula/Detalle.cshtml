@@ -1,6 +1,6 @@
 @model Peli.Core.Pelicula
 @{
-    Layout = null;
+    Layout = "_Layout2";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -8,19 +8,19 @@
     <title>Detalle - Pelicula</title>
 </head>
 <body>
-    <h1>Detalle</h1>
-    <table>
+    <h1 class="c">Detalle</h1>
+    <table class=" table is-bordered">
         <thead>
             <tr>
-                <th>Duracion</th>
-                <th>FechaEstreno</th>
-                <th>Genero</th>
+                <th class="g3">Duracion</th>
+                <th class="g3">FechaEstreno</th>
+                <th class="g3">Genero</th>
             </tr>
         </thead>
         <tbody>
-         <td>@Model.Duracion</td> 
-         <td>@Model.FechaEstreno</td>
-         <td>@Model.genero.Nombre</td>
+         <td class="g2">@Model.Duracion</td> 
+         <td class="g2">@Model.FechaEstreno</td>
+         <td class="g2">@Model.genero.Nombre</td>
         </tbody>
     </table>
     <button>

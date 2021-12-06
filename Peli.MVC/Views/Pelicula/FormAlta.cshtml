@@ -35,6 +35,15 @@
                 }
             </select>
             </div>
+            <div>
+                 <select asp-for="IdProductoraSeleccionado">
+                <option value="">Elegi Productora</option>
+                @foreach (Peli.Core.Productora productora in Model.Productoras)
+                {
+                    <option value="@productora.Id">@productora.Nombre</option>                 
+                }
+            </select>
+            </div>
         <button type="submit">Alta Pelicula</button>
     </form>
 </body>

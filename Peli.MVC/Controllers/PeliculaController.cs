@@ -23,23 +23,29 @@ namespace Peli.Controllers
         }
         [HttpGet]
 
-        public IActionResult FormAlta(int? idGenero)
+        public IActionResult FormAlta(int? idGenero , int idProductora)
          {
-            var vmPelicula= new VMPelicula(Repositorio.Generos)
+            var vmPelicula= new VMPelicula(Repositorio.Generos , Repositorio.Productoras)
             {
                IdGeneroSeleccionado = idGenero
             };
             return View(vmPelicula);
         }
 
+
         [HttpPost]
 
         public IActionResult FormAlta(VMPelicula vMPelicula)
         {
              var genero = Repositorio.GetGenero(vMPelicula.IdGeneroSeleccionado.Value);
+             var productora = Repositorio.GetProductora(vMPelicula.IdProductoraSeleccionado);
              vMPelicula.Pelicula.genero = genero;
+             vMPelicula.Pelicula.productora = productora;
              Repositorio.AgregarPelicula(vMPelicula.Pelicula);
              return View("Index",Repositorio.Peliculas);
+
+             
     }
+    
 }
 }

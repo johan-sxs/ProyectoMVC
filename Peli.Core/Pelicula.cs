@@ -11,6 +11,7 @@ namespace Peli.Core
         public DateTime FechaEstreno {get; set;}
         public string Descripcion {get; set;}
         public Genero genero {get;set;}
+        public Productora productora{get;set;}
     
     }
 }
