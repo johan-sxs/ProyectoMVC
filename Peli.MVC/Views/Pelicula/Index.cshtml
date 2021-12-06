@@ -1,48 +1,21 @@
 @model IEnumerable<Peli.Core.Pelicula>
 @{
-  Layout = null;
+  Layout = "_Layout3";
 }
 <html>
 
 <head>
-  <style>
-    #customers {
-      font-family: Arial, Helvetica, sans-serif;
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    #customers td,
-    #customers th {
-      border: 1px solid #ddd;
-      padding: 8px;
-    }
-
-    #customers th {
-      padding-top: 12px;
-      padding-bottom: 12px;
-      text-align: left;
-      background-color: black;
-      color: white;
-    }
-
-    div.a {
-      text-align: center;
-    }
-  </style>
   <title> Peliculas</title>
   </div>
 </head>
 
 <body>
-  <div class="a">
-    <h1>PELICULAS</h1>
-  </div>
-  <table id="customers">
+    <h1 class="c">PELICULAS</h1>
+  <table class="table is-bordered">
     <thead>
       <tr>
-        <th>Titulo</th>
-        <th>Descripcion</th>
+        <th class="g3">Titulo</th>
+        <th class="g3">Descripcion</th>
       </tr>
     </thead>
     <tbody>
@@ -50,8 +23,8 @@
       {
         <tr>
 
-          <td><a asp-controller="Pelicula" asp-action="Detalle" asp-route-id="@pelicula.Id">@pelicula.Titulo</a> </td>
-          <td><a asp-controller="Pelicula" asp-action="Detalle" asp-route-id="@pelicula.Id">@pelicula.Descripcion</a></td>
+          <td class="g2"><a asp-controller="Pelicula" asp-action="Detalle" asp-route-id="@pelicula.Id">@pelicula.Titulo</a> </td>
+          <td class="g2"><a asp-controller="Pelicula" asp-action="Detalle" asp-route-id="@pelicula.Id">@pelicula.Descripcion</a></td>
         </tr>
       }
     </tbody>

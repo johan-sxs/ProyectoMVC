@@ -1,44 +1,24 @@
 @model  IEnumerable<Peli.Core.Genero>
 @{
-    Layout = null;
+    Layout = "_Layout2";
 }
 <html>
     <head>
-        <style>
-#customers {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 10%;
-}
-
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: black;
-  color: white;
-}
-</style>
         <title>Pelicula - Genero</title>
     </head>
     <body>
-<h1>Generos</h1>
-<table id="customers">
+<h1 class="c">Generos</h1>
+<table class="g1">
     <thead>
         <tr>
-    <th>Nombre</th>
+    <th class="g3">Nombre</th>
     </tr>
     </thead>
     <tbody>
     @foreach (Peli.Core.Genero genero in Model)
     {
         <tr>
-        <td>
+        <td class="g2">
         <a asp-controller="Genero" asp-action="Detalle" asp-route-id="@genero.Id">@genero.Nombre</a> 
         </td>
         </tr>

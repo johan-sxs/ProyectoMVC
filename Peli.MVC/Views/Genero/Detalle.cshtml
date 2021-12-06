@@ -1,15 +1,33 @@
 @model Peli.Core.Genero
 @{
-    Layout = null;
+    Layout =null;
 }
-
 <!DOCTYPE html>
-<html >
+<html lang="en">
 <head>
-<title>  Detalle</title>
+    <title>Detalle - Genero</title>
 </head>
 <body>
-<tbody>
-</tbody>
+    <h1>Detalle</h1>
+    <h3 > Nombre: @Model.Nombre </h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Peliculas</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Peli.Core.Pelicula pelicula in Model.Peliculas)
+            {
+            <tr>
+                <td>@pelicula.Titulo</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    <a  asp-controller="Pelicula" asp-action="Index"> Agregar Peliculas </a> <br />
+    <button>
+<a asp-action="Index"> inicio </a>
+</button>
 </body>
 </html>

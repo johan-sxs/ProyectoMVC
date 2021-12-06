@@ -9,6 +9,7 @@
 </head>
 <body>
     <h1>Detalle</h1>
+    <h3 > Nombre: @Model.Nombre </h3>
     <table>
         <thead>
             <tr>
@@ -18,9 +19,15 @@
         <tbody>
             @foreach (Peli.Core.Pelicula pelicula in Model.Peliculas)
             {
-            <a asp-controller="Pelicula" asp-action="Detalle" asp-route-id="@pelicula.Id">@pelicula.Titulo</a>
+            <tr>
+                <td>@pelicula.Titulo</td>
+            </tr>
             }
         </tbody>
     </table>
+    <a  asp-controller="Pelicula" asp-action="Index"> Agregar Peliculas </a> <br />
+    <button>
+<a asp-action="Index"> inicio </a>
+</button>
 </body>
 </html>
