@@ -1,19 +1,23 @@
 @model Peli.Core.Genero
 @{
-    Layout = null;
+    Layout = "_Layout3";
 }
 <!DOCTYPE html>
 <head>
     <title>Pelicula - Genero</title>
 </head>
+<div class="isolate">
+<div class="second obj">
 <body>
     <form asp-action="FormAlta" method="post">
         <div asp-validation-summary="All"></div>
-        <div>
-            <label asp-for="Nombre">GENEROS:</label>
-            <input asp-for="Nombre" />
+        <div class="field is-horizontal ">
+            <label class = "la"  asp-for="Nombre">GENEROS:</label>
+            <input class="input is-link"  asp-for="Nombre" />
         </div>
         <button type="submit">Alta Genero</button>
     </form>
 </body>
+ </div>
+</div>
 </html>

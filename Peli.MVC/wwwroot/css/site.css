@@ -60,13 +60,14 @@
 } */
 
 .second {
-  background: linear-gradient(rgb(241, 109, 253), rgb(120, 217, 247),rgb(255, 204, 137));
+  background: linear-gradient(rgb(243, 237, 243), rgb(30, 33, 34),rgb(104, 103, 102));
 }
 
 .input{
-  width: 20%;
-  height: 3%;
+  margin-top: 9px;
+  width: 15%;
+  height: 25px;
 }
 .la{
-  padding: 5px;
+  padding: 8px;
 }

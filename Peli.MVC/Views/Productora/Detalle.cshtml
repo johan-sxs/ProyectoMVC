@@ -20,12 +20,14 @@
             @foreach (Peli.Core.Pelicula pelicula in Model.Peliculas)
             {
             <tr>
-                <td>@pelicula.Titulo</td>
+                <td>
+   <a asp-controller="Pelicula" asp-action="Detalle" asp-route-id="@pelicula.Id">@pelicula.Titulo</a>
+
+                </td>
             </tr>
             }
         </tbody>
     </table>
-    <a  asp-controller="Pelicula" asp-action="Index"> Agregar Peliculas </a> <br />
     <button>
 <a asp-action="Index"> inicio </a>
 </button>

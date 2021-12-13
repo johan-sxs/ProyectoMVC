@@ -1,29 +1,32 @@
 @model Peli.MVC.ViewModels.VMPelicula;
 @{
-    Layout = null;
+    Layout = "_Layout3";
 }
 <!DOCTYPE html>
 <head>
     <title>Pelicula - Peliculas</title>
 </head>
+<div class="isolate">
+<div class="second obj">
+
 <body>
     <form asp-action="FormAlta" method="post">
         <div asp-validation-summary="All"></div>
-        <div>
-            <label asp-for="@Model.Pelicula.Titulo">PELICULA</label>
-            <input asp-for="@Model.Pelicula.Titulo" />
+        <div class="field is-horizontal ">
+            <label class = "la" asp-for="@Model.Pelicula.Titulo">PELICULA</label>
+            <input class="input is-link" asp-for="@Model.Pelicula.Titulo" />
         </div>
-         <div>
-            <label asp-for="@Model.Pelicula.Duracion">Duracion</label>
-            <input asp-for="@Model.Pelicula.Duracion" />
+         <div class="field is-horizontal ">
+            <label class = "la" asp-for="@Model.Pelicula.Duracion">DURACION</label>
+            <input class="input is-link" asp-for="@Model.Pelicula.Duracion" />
         </div>
-         <div>
-            <label asp-for="@Model.Pelicula.FechaEstreno">FechaEstreno</label>
-            <input asp-for="@Model.Pelicula.FechaEstreno" />
+         <div class="field is-horizontal ">
+            <label class = "la" asp-for="@Model.Pelicula.FechaEstreno">FECHAESTRENO</label>
+            <input class="input is-link" asp-for="@Model.Pelicula.FechaEstreno" />
         </div>
-     <div>
-            <label asp-for="@Model.Pelicula.Descripcion">DESCRIPCION</label>
-            <input asp-for="@Model.Pelicula.Descripcion" />
+     <div class="field is-horizontal ">
+            <label class = "la" asp-for="@Model.Pelicula.Descripcion">DESCRIPCION</label>
+            <input class="input is-link" asp-for="@Model.Pelicula.Descripcion" />
         </div>
         <div>
             
@@ -48,4 +51,6 @@
         <button type="submit">Alta Pelicula</button>
     </form>
 </body>
+</div>
+</div>
 </html>
