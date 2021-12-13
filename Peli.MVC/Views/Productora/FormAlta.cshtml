@@ -1,6 +1,6 @@
 @model Peli.Core.Productora
 @{
-    Layout = null;
+    Layout = "_Layout3";
 }
 <!DOCTYPE html>
 <head>
@@ -9,9 +9,9 @@
 <body>
     <form asp-action="FormAlta" method="post">
         <div asp-validation-summary="All"></div>
-        <div>
-            <label asp-for="Nombre">Productora</label>
-            <input asp-for="Nombre" />
+        <div  class="field is-horizontal ">
+            <label class = "la" asp-for="Nombre">PRODUCTORA: </label>
+            <input class="input is-link" asp-for="Nombre" />
         </div>
         <button type="submit">Alta Productora</button>
     </form>
