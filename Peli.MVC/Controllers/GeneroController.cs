@@ -13,12 +13,12 @@ namespace Peli.Controllers
         [HttpGet]
         public IActionResult Detalle(int id)
         {
-            var Genero = Repositorio.GetGenero(id);
-            if (Genero is null)
+            var genero = Repositorio.GetGenero(id);
+            if (genero is null)
             {
                 return NotFound();
             }
-            return View(Genero);
+            return View(genero);
         }
         [HttpGet]
 

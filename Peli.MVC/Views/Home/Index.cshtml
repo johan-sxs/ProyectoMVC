@@ -8,32 +8,30 @@
 
   <title>Peliculas</title>
 </head>
-<div class="isolate">
-   @* <div class="first obj"> *@
-  <div class="second obj">
 <body>
+  <div class="isolate">
+  <div class="second obj">
   <h1 class="c">Elige Donde Entrar</h1>
     <table class="table is-bordered" align="center" width ="30%" height = "30%">
       <tr>
         <th class="g3">GENERO</th>
-        <th class="g3">PELICULA</th>
         <th class="g3">PRODUCTORA</th>
+        <th class="g3">PELICULA</th>
       </tr>
       <tr class="e">
         <td><a asp-controller="Genero" asp-action="Index">Ver Generos</a></td>
-        <td><a asp-controller="Pelicula" asp-action="Index">Ver Peliculas</a></td>
         <td><a asp-controller="Productora" asp-action="Index">Ver Productoras</a></td>
+        <td><a asp-controller="Pelicula" asp-action="Index">Ver Peliculas</a></td>
 
       </tr>
       <tr class="e">
         <td> <a asp-controller="Genero" asp-action="FormAlta">Alta Genero</a></td>
-        <td><a asp-controller="Pelicula" asp-action="FormAlta">Alta Pelicula</a></td>
         <td><a asp-controller="Productora" asp-action="FormAlta">Alta Productora</a></td>
+        <td><a asp-controller="Pelicula" asp-action="FormAlta">Alta Pelicula</a></td>
 
       </tr>
     </table>
+    </div>
+</div>
 </body>
-</div>
-</div>
-@* </div> *@
 </html>

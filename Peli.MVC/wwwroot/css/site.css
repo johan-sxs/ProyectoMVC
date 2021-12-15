@@ -71,3 +71,15 @@
 .la{
   padding: 8px;
 }
+.bu{
+  background-color: white;
+    padding: 4px;
+    margin: 5px;
+    color: black;
+    border: 1px solid blue;
+     
+}
+.bu:hover {
+  background-color: blue;
+  color: white;
+}

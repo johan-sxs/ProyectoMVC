@@ -22,15 +22,13 @@
       @foreach (Peli.Core.Productora productora in Model)
       {
         <tr>
-
           <td class="g2"><a asp-controller="Productora" asp-action="Detalle"
             asp-route-id="@productora.Id">@productora.Nombre</a> </td>
         </tr>
       }
     </tbody>
   </table>
-  <br>
-  <button>
+  <button class="bu">
     <a asp-controller="" asp-action="Index">Inicio</a>
   </button>
   </div>

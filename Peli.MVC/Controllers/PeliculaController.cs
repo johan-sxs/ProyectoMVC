@@ -14,12 +14,12 @@ namespace Peli.Controllers
         [HttpGet]
         public IActionResult Detalle(int id)
         {
-            var Pelicula = Repositorio.GetPelicula(id);
-            if (Pelicula is null)
+            var pelicula = Repositorio.GetPelicula(id);
+            if (pelicula is null)
             {
                 return NotFound();
             }
-            return View(Pelicula);
+            return View(pelicula);
         }
         [HttpGet]
 
@@ -43,6 +43,8 @@ namespace Peli.Controllers
              vMPelicula.Pelicula.genero = genero;
              vMPelicula.Pelicula.productora=prductora;
              Repositorio.AgregarPelicula(vMPelicula.Pelicula);
+             genero.AgregarPelicula(vMPelicula.Pelicula);
+            prductora.AgregarPelicula(vMPelicula.Pelicula);
              return View("Index",Repositorio.Peliculas);
 
              

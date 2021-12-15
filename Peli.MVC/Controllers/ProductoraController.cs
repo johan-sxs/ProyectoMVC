@@ -13,12 +13,12 @@ namespace Peli.Controllers
 [HttpGet]
 public IActionResult Detalle(int id)
 {
-    var Productora = Repositorio.GetProductora(id);
-    if(Productora is null)
+    var productora = Repositorio.GetProductora(id);
+    if(productora is null)
     {
         return NotFound();
     }
-    return View(Productora);
+    return View(productora);
 }
 [HttpGet]
  public IActionResult FormAlta() => View();

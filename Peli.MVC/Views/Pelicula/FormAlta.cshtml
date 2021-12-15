@@ -30,7 +30,7 @@
         </div>
         <div>
             
-        <select asp-for="IdGeneroSeleccionado">
+        <select class="bu" asp-for="IdGeneroSeleccionado">
                 <option value="">Elegi Genero</option>
                 @foreach (Peli.Core.Genero genero in Model.Generos)
                 {
@@ -40,7 +40,7 @@
             </div>
              <div>
             
-        <select asp-for="IdProductoraSeleccionada">
+        <select class="bu" asp-for="IdProductoraSeleccionada">
                 <option value="">Elegi Productora</option>
                 @foreach (Peli.Core.Productora productora in Model.Productoras)
                 {
@@ -48,7 +48,7 @@
                 }
             </select>
             </div>
-        <button type="submit">Alta Pelicula</button>
+        <button type="submit" class="bu">Alta Pelicula</button>
     </form>
 </body>
 </div>
